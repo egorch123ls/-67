@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MUSSI — растительные пудинги и десерты, самовывоз у ВДНХ</title>
+    <meta name="description" content="MUSSI — кафе с растительными пудингами, выпечкой и напитками у ВДНХ. На сайте оформляется самовывоз, доставку привозят Яндекс Еда и Delivery Club.">
+    <meta name="theme-color" content="#9b6dff">
+    <meta property="og:title" content="MUSSI - plant based десерты">
+    <meta property="og:description" content="Пудинги, plant based десерты, спешлы и напитки.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mussicafe.ru/">
+    <meta property="og:image" content="https://mussicafe.ru/og-mussi.jpg">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "MUSSI",
+        "url": "https://mussicafe.ru/",
+        "servesCuisine": ["Plant based desserts", "American pudding", "Coffee"],
+        "description": "Кафе с американскими пудингами, десертами и напитками на растительной основе.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Москва",
+          "streetAddress": "ул. Академика Королева, 13с1"
+        },
+        "openingHours": "Mo-Su 10:00-19:00",
+        "hasMenu": "https://mussicafe.ru/page48433611.html"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#menu" data-i18n="skip.menu">Перейти к меню</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="MUSSI на главную">
+        <span class="brand__mark">M</span>
+        <span>MUSSI</span>
+      </a>
+      <nav class="main-nav" aria-label="Главная навигация">
+        <a href="#menu" data-i18n="nav.menu">Меню</a>
+        <a href="#specials" data-i18n="nav.specials">Спешлы</a>
+        <a href="#delivery" data-i18n="nav.delivery">Как получить</a>
+        <a href="#about" data-i18n="nav.about">О нас</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-toggle" data-language-toggle aria-label="Language">
+          <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      <button class="cart-trigger" type="button" data-cart-open data-i18n-label="cart.open" aria-label="Открыть корзину">
+        <span data-i18n="cart.open">Корзина</span>
+        <strong data-cart-count>0</strong>
+      </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero__content">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Десертное ателье · Москва</p>
+          <h1 data-i18n="hero.title">Десерты MUSSI с европейским настроением</h1>
+          <p class="hero__lead">
+            <span data-i18n="hero.lead">Пудинги, выпечка и напитки на растительной основе: мягкие текстуры, сезонные вкусы и спокойная эстетика маленького кафе.</span>
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#menu" data-i18n="hero.cta.menu">Собрать заказ</a>
+            <a class="button button--ghost" href="#delivery" data-i18n="hero.cta.delivery">Как получить</a>
+          </div>
+          <dl class="hero__stats" aria-label="Ключевая информация">
+            <div>
+              <dt>10 км</dt>
+              <dd data-i18n="hero.stat.radius">сервисы доставки от ВДНХ</dd>
+            </div>
+            <div>
+              <dt>10-19</dt>
+              <dd data-i18n="hero.stat.hours">каждый день</dd>
+            </div>
+            <div>
+              <dt>100%</dt>
+              <dd data-i18n="hero.stat.plant">plant based</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <img class="hero__image" src="assets/menu/banana-pudding.jpg" alt="" loading="eager" decoding="async" onerror="this.closest('.hero__visual').classList.add('has-no-image'); this.remove();">
+          <div class="dessert-card dessert-card--main">
+            <span class="dessert-card__label" data-i18n="hero.card.label">Хит</span>
+            <strong data-i18n="hero.card.title">Банановый пудинг</strong>
+            <small data-i18n="hero.card.desc">заварной банановый крем · ванильный бисквит · кокосовое печенье</small>
+          </div>
+          <div class="floating-note floating-note--one" data-i18n="hero.note.one">Ателье</div>
+          <div class="floating-note floating-note--two" data-i18n="hero.note.two">Растительная основа</div>
+          <div class="floating-note floating-note--three" data-i18n="hero.note.three">свежие десерты</div>
+        </div>
+      </section>
+
+      <section class="section intro-grid" id="about" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow" data-i18n="about.eyebrow">Информация о нас</p>
+          <h2 id="about-title" data-i18n="about.title">Авторские десерты, кофе и настроение MUSSI</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span>01</span>
+            <h3 data-i18n="about.plant.title">Растительная основа</h3>
+            <p data-i18n="about.plant.text">Вся продукция на растительной основе: пудинги, выпечка, кофе и лимонады.</p>
+          </article>
+          <article class="feature-card">
+            <span>02</span>
+            <h3 data-i18n="about.low.title">Low waste</h3>
+            <p data-i18n="about.low.text">На производстве сортируют отходы и внимательно относятся к ресурсам.</p>
+          </article>
+          <article class="feature-card">
+            <span>03</span>
+            <h3 data-i18n="about.special.title">Спешлы</h3>
+            <p data-i18n="about.special.text">Сезонные вкусы выходят как короткие коллекции: сегодня есть, завтра уже может не быть.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section founder-story" aria-labelledby="founder-title">
+        <div class="founder-story__media">
+          <img src="assets/about/founder.png" alt="Основательница MUSSI с пудингами" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('has-no-image'); this.remove();">
+        </div>
+        <div class="founder-story__content">
+          <p class="eyebrow" data-i18n="founder.eyebrow">Основательница MUSSI</p>
+          <h2 id="founder-title" data-i18n="founder.title">Лиза Мадрид</h2>
+          <p data-i18n="founder.text">Вы все знаете, что я уделяю огромное внимание еде в разных странах, особую любовь я питаю к американским пудингам, и тадам, теперь вы можете их попробовать.</p>
+          <p class="founder-story__note" data-i18n="founder.note">MUSSI вырос из личной насмотренности, путешествий и желания сделать десерт, который выглядит нежно, а по вкусу остается честным, насыщенным и растительным.</p>
+        </div>
+      </section>
+
+      <section class="section seasonal-specials" id="specials" aria-labelledby="specials-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="specials.eyebrow">Спешлы сезона</p>
+            <h2 id="specials-title" data-i18n="specials.title">То, что есть сейчас и может исчезнуть завтра</h2>
+          </div>
+        </div>
+        <div class="specials-grid" data-specials-grid></div>
+      </section>
+
+      <section class="section menu-section" id="menu" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="menu.eyebrow">Меню</p>
+            <h2 id="menu-title" data-i18n="menu.title">Пудинги, выпечка и сезонные спешлы</h2>
+          </div>
+        </div>
+
+        <div class="menu-toolbar" aria-label="Фильтры меню">
+          <label class="search-field">
+            <span data-i18n="menu.search.label">Поиск по меню</span>
+            <input type="search" data-search data-i18n-placeholder="menu.search.placeholder" placeholder="банановый, матча, брауни..." autocomplete="off">
+          </label>
+          <div class="chip-row" data-category-filters aria-label="Категории"></div>
+          <div class="chip-row" data-i18n-label="menu.quickFilters" aria-label="Быстрые фильтры">
+            <button class="chip" type="button" data-tag-filter="featured" data-i18n="filter.featured">хиты</button>
+            <button class="chip" type="button" data-tag-filter="seasonal" data-i18n="filter.seasonal">сезонное</button>
+            <button class="chip" type="button" data-tag-filter="drink" data-i18n="filter.drink">напитки</button>
+            <button class="chip" type="button" data-tag-filter="chocolate" data-i18n="filter.chocolate">шоколад</button>
+          </div>
+        </div>
+
+        <div class="menu-meta">
+          <span data-result-count>0 позиций</span>
+          <button class="text-button" type="button" data-reset-filters data-i18n="menu.reset">Сбросить фильтры</button>
+        </div>
+
+        <div class="product-grid" data-product-grid aria-live="polite"></div>
+      </section>
+
+      <section class="section order-story">
+        <div class="order-story__panel">
+          <p class="eyebrow" data-i18n="order.eyebrow">Как заказать</p>
+          <h2 data-i18n="order.title">Соберите заказ на самовывоз — команда MUSSI подтвердит детали по телефону</h2>
+          <p>
+            <span data-i18n="order.text">На сайте оформляется только самовывоз: выберите десерты, оставьте телефон и заберите заказ в кафе. Доставку курьером привозят Яндекс Еда и Delivery Club.</span>
+          </p>
+          <div class="order-steps">
+            <span data-i18n="order.step1">1. Выберите продукт</span>
+            <span data-i18n="order.step2">2. Оставьте телефон</span>
+            <span data-i18n="order.step3">3. Оплатите (тестово не работает)</span>
+          </div>
+        </div>
+        <div class="mini-cart-preview" data-mini-cart>
+          <strong data-i18n="mini.empty.title">Ваша корзина</strong>
+          <p data-i18n="mini.empty.text">Пока пусто. Добавьте банановый пудинг, шоколадный брауни или сет из трех вкусов.</p>
+        </div>
+      </section>
+
+      <section class="section delivery" id="delivery" aria-labelledby="delivery-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="delivery.eyebrow">Как получить заказ</p>
+            <h2 id="delivery-title" data-i18n="delivery.title">Самовывоз у ВДНХ или доставка курьером — каждый день с 10:00 до 19:00</h2>
+          </div>
+          <a class="button button--dark" href="https://mussicafe.ru/page48434649.html" target="_blank" rel="noreferrer" data-i18n="delivery.link">Открыть страницу доставки</a>
+        </div>
+        <div class="delivery-grid">
+          <article class="delivery-card">
+            <h3 data-i18n="delivery.card.title">Доставка курьером</h3>
+            <p data-i18n="delivery.card.text">Курьер привозит заказ в радиусе 10 км от метро ВДНХ. Оформите доставку в Яндекс Еде или Delivery Club — корзина на сайте принимает только самовывоз.</p>
+            <div class="delivery-card__actions">
+              <a href="https://mussicafe.ru/page48434649.html" target="_blank" rel="noreferrer">Яндекс Еда / Delivery Club</a>
+            </div>
+          </article>
+          <article class="delivery-card">
+            <h3 data-i18n="delivery.pickup.title">Самовывоз</h3>
+            <p data-i18n="delivery.pickup.text">На сайте оформляется только самовывоз. Адрес: ул. Академика Королева, 13с1, подъезд 1. Вход с ул. Аргуновской, ориентир — вывеска «телеканал Спас».</p>
+            <p class="muted" data-i18n="delivery.pickup.note">Для пропуска нужен паспорт или права. После проходной идите к лифтам по длинному желтому коридору до лифта N10, 7 этаж, направо до 717к.</p>
+          </article>
+          <article class="delivery-card delivery-card--accent">
+            <h3 data-i18n="delivery.telegram.title">Telegram</h3>
+            <p data-i18n="delivery.telegram.text">Следите за спешлами, открытиями и новыми вкусами в Telegram-канале MUSSI.</p>
+            <a href="https://t.me/Mussicafe" target="_blank" rel="noreferrer" data-i18n="delivery.telegram.link">Перейти в Telegram</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section testimonials" aria-labelledby="reviews-title">
+        <div>
+          <p class="eyebrow" data-i18n="reviews.eyebrow">Отзывы</p>
+          <h2 id="reviews-title" data-i18n="reviews.title">Реальные отзывы, которые можно проверить</h2>
+          <p class="reviews-source" data-i18n="reviews.source">Цитаты взяты из публичных отзывов MUSSI. Ниже оставлены ссылки на источники.</p>
+          <div class="review-source-links" aria-label="Источники отзывов">
+            <a href="https://restaurantguru.ru/Mussi-Moscow-3" target="_blank" rel="noopener noreferrer" data-i18n="reviews.source.yandex">Проверить отзывы с Яндекса</a>
+            <a href="https://2gis.ru/moscow/branches/70000001087472220" target="_blank" rel="noopener noreferrer" data-i18n="reviews.source.2gis">Открыть 2ГИС: 4.7 · 200 оценок</a>
+          </div>
+        </div>
+        <div class="review-grid">
+          <figure class="review-card">
+            <blockquote data-i18n="reviews.one">“Заведение очень милое, все фиолетовое.”</blockquote>
+            <figcaption>
+              <span data-i18n="reviews.one.source">Яндекс · Анастасия · месяц назад</span>
+              <a href="https://restaurantguru.ru/Mussi-Moscow-3" target="_blank" rel="noopener noreferrer" data-i18n="reviews.check">Проверить</a>
+            </figcaption>
+          </figure>
+          <figure class="review-card">
+            <blockquote data-i18n="reviews.two">“Вкусно, уютно, музыка не громкая, можно спокойно поболтать с подружкой.”</blockquote>
+            <figcaption>
+              <span data-i18n="reviews.two.source">Яндекс · Дарья У. · месяц назад</span>
+              <a href="https://restaurantguru.ru/Mussi-Moscow-3" target="_blank" rel="noopener noreferrer" data-i18n="reviews.check">Проверить</a>
+            </figcaption>
+          </figure>
+          <figure class="review-card">
+            <blockquote data-i18n="reviews.three">“Шоколадный оказался очень вкусным и горьковатым, для меня идеал!”</blockquote>
+            <figcaption>
+              <span data-i18n="reviews.three.source">Яндекс · moomin moo · 6 месяцев назад</span>
+              <a href="https://restaurantguru.ru/Mussi-Moscow-3" target="_blank" rel="noopener noreferrer" data-i18n="reviews.check">Проверить</a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <div>
+          <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+          <h2 id="faq-title" data-i18n="faq.title">Частые вопросы</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary data-i18n="faq.one.q">1</summary>
+            <p data-i18n="faq.one.a">1</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.two.q">2</summary>
+            <p data-i18n="faq.two.a">2</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.three.q">3</summary>
+            <p data-i18n="faq.three.a">3</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.four.q">4</summary>
+            <p data-i18n="faq.four.a">4</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>MUSSI</strong>
+        <p data-i18n="footer.text">Пудинги, plant based десерты и напитки.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#menu" data-i18n="nav.menu">Меню</a>
+        <a href="#delivery" data-i18n="nav.delivery">Как получить</a>
+      </div>
+    </footer>
+
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+      <div class="cart-drawer__backdrop" data-cart-close></div>
+      <section class="cart-drawer__panel" aria-labelledby="cart-title" role="dialog" aria-modal="true">
+        <div class="cart-drawer__header">
+          <div>
+            <p class="eyebrow" data-i18n="cart.eyebrow">Самовывоз</p>
+            <h2 id="cart-title" data-i18n="cart.title">Ваш заказ</h2>
+          </div>
+          <button class="icon-button" type="button" data-cart-close data-i18n-label="cart.close" aria-label="Закрыть корзину">×</button>
+        </div>
+        <div class="cart-tabs" role="tablist" aria-label="Корзина и заказы">
+          <button class="cart-tab is-active" type="button" data-cart-tab="cart" data-i18n="cart.tab.cart">Корзина</button>
+          <button class="cart-tab" type="button" data-cart-tab="orders" data-i18n="cart.tab.orders">Ваши заказы</button>
+        </div>
+        <div class="cart-pane is-active" data-cart-pane="cart">
+          <div class="cart-items" data-cart-items></div>
+          <form class="checkout-form" data-checkout-form>
+            <label>
+              <span data-i18n="cart.name">Имя</span>
+              <input name="name" autocomplete="name" data-i18n-placeholder="cart.name.placeholder" placeholder="Как к вам обращаться" required>
+            </label>
+            <label>
+              <span data-i18n="cart.contact">Телефон</span>
+              <input name="contact" type="tel" inputmode="tel" autocomplete="tel" data-i18n-placeholder="cart.contact.placeholder" placeholder="+7 999 999-99-99" required>
+            </label>
+            <div class="checkout-form__pickup" data-pickup-slot>
+              <span class="checkout-form__pickup-label" data-i18n="cart.pickupTime">Когда забрать</span>
+              <div class="checkout-form__pickup-grid">
+                <label class="checkout-form__pickup-field">
+                  <span class="checkout-form__pickup-field-label" data-i18n="cart.pickupDate">Дата</span>
+                  <input name="pickupDate" type="date" class="checkout-form__pickup-control" data-pickup-date required>
+                </label>
+                <label class="checkout-form__pickup-field">
+                  <span class="checkout-form__pickup-field-label" data-i18n="cart.pickupClock">Время</span>
+                  <select name="pickupClock" class="checkout-form__pickup-control checkout-form__pickup-select" data-pickup-clock required></select>
+                </label>
+              </div>
+              <p class="checkout-form__pickup-preview" data-pickup-preview hidden aria-live="polite"></p>
+              <small class="checkout-form__pickup-help muted" data-i18n="cart.pickupTime.help">Каждый день с 10:00 до 19:00, последний слот самовывоза — 18:55. Не раньше чем через 15 минут от момента заказа.</small>
+            </div>
+            <label>
+              <span data-i18n="cart.comment">Комментарий</span>
+              <textarea name="comment" rows="3" data-i18n-placeholder="cart.comment.placeholder" placeholder="Аллергии, пожелания, кому передать"></textarea>
+            </label>
+            <label>
+              <span data-i18n="cart.promo">Промокод</span>
+              <input name="promo" data-promo placeholder="MUSSI10">
+              <small class="promo-status" data-promo-status></small>
+            </label>
+            <div class="cart-summary">
+              <span data-i18n="cart.total">Итого</span>
+              <strong data-cart-total>0 ₽</strong>
+            </div>
+            <p class="cart-note" data-cart-note>После оформления статус заказа — во вкладке «Ваши заказы». Доставку курьером оформите в Яндекс Еде или Delivery Club.</p>
+            <div class="order-status" data-order-status hidden></div>
+            <button class="button button--primary button--full" type="submit" data-checkout-submit data-i18n="cart.submit" disabled>Оформить заказ</button>
+            <p class="checkout-hint" data-checkout-hint data-i18n="checkout.hint.empty">Добавьте хотя бы один товар, чтобы оформить заказ.</p>
+            <button class="text-button text-button--center" type="button" data-repeat-order data-i18n="cart.repeat">Повторить последний заказ</button>
+          </form>
+        </div>
+        <div class="cart-pane" data-cart-pane="orders" hidden>
+          <div class="order-history" data-order-history>
+            <p class="muted" data-i18n="orders.empty">Здесь появятся ваши последние заказы.</p>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

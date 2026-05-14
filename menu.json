@@ -1,0 +1,621 @@
+{
+  "brand": {
+    "name": "MUSSI",
+    "description": "Кафе с американскими пудингами, десертами и напитками на растительной основе.",
+    "address": "Москва, ул. Академика Королева, 13с1, подъезд 1",
+    "pickupHint": "Вход с ул. Аргуновской, ориентир - вывеска «телеканал Спас». Для пропуска нужен паспорт или права.",
+    "deliveryRadius": "10 км от метро ВДНХ",
+    "hours": "ежедневно с 10:00 до 19:00"
+  },
+  "categories": [
+    {
+      "id": "puddings",
+      "title": "Пудинги"
+    },
+    {
+      "id": "bakery",
+      "title": "Выпечка"
+    },
+    {
+      "id": "specials",
+      "title": "Спешлы"
+    },
+    {
+      "id": "drinks",
+      "title": "Напитки"
+    }
+  ],
+  "products": [
+    {
+      "id": "charlotte-popcorn",
+      "name": "Пудинг Шарлотка с попкорном",
+      "category": "puddings",
+      "description": "Кислые и сладкие яблочки, заваренные с уютными пряностями, солёно-сладкая воздушная кукуруза в основе волшебного попкорнового мусса и ванильный бисквит.",
+      "ingredients": "Сливки растительные, молоко соевое, яблоки, пюре яблочное, мука пшеничная, масло подсолнечное, сахар, попкорн Holy Corn, сок яблочный, крахмал кукурузный, сироп попкорн, маргарин, ванильный сахар, корица, смесь пряных специй, уксус столовый, разрыхлитель, соль, ванилин, сода.",
+      "nutrition": "КБЖУ 100 г: 186 / 2.6 / 10.2 / 20",
+      "price": 390,
+      "size": "150 мл",
+      "tags": [
+        "plant based",
+        "new",
+        "pudding"
+      ],
+      "featured": true,
+      "image": "assets/menu/charlotte-popcorn.jpg",
+      "variants": [
+        {
+          "id": "150ml",
+          "label": "150 мл",
+          "size": "150 мл",
+          "price": 390
+        },
+        {
+          "id": "320ml",
+          "label": "320 мл",
+          "size": "320 мл",
+          "price": 550
+        }
+      ],
+      "available": true,
+      "isSpecial": false,
+      "sortOrder": 0,
+      "updatedAt": "2026-05-11T21:28:37.116Z"
+    },
+    {
+      "id": "matcha-banana-bread",
+      "name": "Матча банановый хлеб",
+      "category": "bakery",
+      "description": "Мягкий и сочный банановый бисквит с терпкой матчей, кусочками горького шоколада и грушевым джемом.",
+      "ingredients": "Бананы, мука пшеничная, сахар, молоко соевое, масло растительное, шоколад горький, пюре яблочное, джем грушевый с бананом, псилиум, матча, разрыхлитель, соль, сода, ванилин.",
+      "nutrition": "КБЖУ 120 г: 333 / 4.2 / 12.9 / 50.0",
+      "price": 67,
+      "size": "120 г",
+      "tags": [
+        "plant based",
+        "matcha",
+        "bakery"
+      ],
+      "image": "assets/menu/matcha-banana-bread.jpg"
+    },
+    {
+      "id": "pink-velvet",
+      "name": "Розовый бархат",
+      "category": "specials",
+      "description": "Бархатный розовый бисквит с ягодным соусом из малины, черники, ежевики и смородины в сырном нежно-муссиевом креме.",
+      "ingredients": "Розовый бисквит, ягодный соус, муссиевый крем.",
+      "nutrition": "КБЖУ 100 г: 168.85 / 2.22 / 9.12 / 19.54",
+      "price": 67,
+      "size": "100 г",
+      "tags": [
+        "plant based",
+        "seasonal",
+        "special"
+      ],
+      "image": "assets/menu/pink-velvet.jpg"
+    },
+    {
+      "id": "kulich-mussi",
+      "name": "Кулич MUSSI",
+      "category": "specials",
+      "description": "Мягчайшая сдоба с вяленой клюквой, пропитанная сиропом с коньяком и апельсиновой цедрой, мусс с голубой матчей, черносмородиновое конфи, ванильная сахарная помадка и зефир ручной работы.",
+      "ingredients": "Сдоба, вяленая клюква, сироп с коньяком, апельсиновая цедра, мусс с голубой матчей, черносмородиновое конфи, сахарная помадка, зефир.",
+      "nutrition": "КБЖУ: 713.5 / 8.6 / 27 / 89",
+      "price": 67,
+      "size": "1 шт.",
+      "tags": [
+        "plant based",
+        "seasonal",
+        "special"
+      ],
+      "image": "assets/menu/kulich-mussi.jpg"
+    },
+    {
+      "id": "banoffee",
+      "name": "Баноффи",
+      "category": "specials",
+      "description": "Спешл-твист на банановый пудинг: бананы, кокосовая соленая карамель, хрустящее печенье, карамельные сливки и горький шоколад.",
+      "ingredients": "Банан свежий, мука пшеничная, молоко соевое, молоко кокосовое, сливки растительные, стружка кокосовая, маргарин, масло подсолнечное, крахмал кукурузный, сахар, шоколад горький, уксус столовый, соль, ванилин, разрыхлитель, сода.",
+      "nutrition": "КБЖУ 100 г: 313.97 / 3.08 / 20.1 / 30.35",
+      "price": 67,
+      "size": "100 г",
+      "tags": [
+        "plant based",
+        "seasonal",
+        "pudding"
+      ],
+      "image": "assets/menu/banoffee.png"
+    },
+    {
+      "id": "strawberry-lemonade-pudding",
+      "name": "Пудинг Клубничный лимонад",
+      "category": "specials",
+      "description": "Взбитые растительные сливки, ванильный бисквит, клубнично-клюквенный компот, лимонный курд, свежая клубника и миндальный грильяж.",
+      "ingredients": "Растительные сливки, ванильный бисквит, растительное молоко, клубнично-клюквенный компот, лимонный курд, клубника, миндальный грильяж.",
+      "nutrition": "КБЖУ: 228 / 2 / 12 / 28",
+      "price": 67,
+      "size": "100 г",
+      "tags": [
+        "plant based",
+        "seasonal",
+        "pudding",
+        "nuts"
+      ],
+      "image": "assets/menu/strawberry-lemonade-pudding.jpg"
+    },
+    {
+      "id": "extra-choco-banana-bread",
+      "name": "Extra Choco Banana Bread",
+      "category": "specials",
+      "description": "Экстра шоколадный влажный банановый бисквит с кусочками горького шоколада для любителей очень шоколадного.",
+      "ingredients": "Банановый бисквит, горький шоколад.",
+      "nutrition": "КБЖУ: 300 / 4 / 12 / 44",
+      "price": 67,
+      "size": "180 г",
+      "tags": [
+        "plant based",
+        "seasonal",
+        "chocolate",
+        "bakery"
+      ],
+      "image": "assets/menu/extra-choco-banana-bread.jpg"
+    },
+    {
+      "id": "classy-soda",
+      "name": "Classy Soda",
+      "category": "drinks",
+      "description": "Классные газированные лимонады на натуральной основе из соков и экстрактов.",
+      "ingredients": "Вкусы: Strawberry Lemongrass, Matcha Yuzu, Sedative Isotonic, Ginger Pear, Rosemary Pineapple, Tiger Cola, Yerba Mate.",
+      "nutrition": "330 мл",
+      "price": 67,
+      "size": "330 мл",
+      "tags": [
+        "plant based",
+        "drink",
+        "soda"
+      ],
+      "image": "assets/menu/classy-soda.jpg"
+    },
+    {
+      "id": "dubai-chocolate-latte",
+      "name": "Латте «Дубайский шоколад»",
+      "category": "drinks",
+      "description": "Ароматный напиток с насыщенным шоколадным вкусом и фисташковыми нотками, украшенный взбитыми шоко-сливками и фисташками.",
+      "ingredients": "Кофе, шоколад, фисташковые ноты, шоко-сливки, фисташки.",
+      "nutrition": "КБЖУ 100 мл: 98 / 1.2 / 5.0 / 11.0",
+      "price": 67,
+      "size": "на выбор",
+      "tags": [
+        "plant based",
+        "seasonal",
+        "coffee",
+        "nuts"
+      ],
+      "image": "assets/menu/dubai-chocolate-latte.jpg"
+    },
+    {
+      "id": "pickme-latte",
+      "name": "Пикми латте",
+      "category": "drinks",
+      "description": "Ослепительный розовый напиток с нежными взбитыми сливками и ароматным малиновым сиропом.",
+      "ingredients": "Кофе, растительные сливки, малиновый сироп.",
+      "nutrition": "КБЖУ 100 мл: 85 / 0.8 / 5 / 9",
+      "price": 67,
+      "size": "на выбор",
+      "tags": [
+        "plant based",
+        "seasonal",
+        "coffee"
+      ],
+      "image": "assets/menu/pickme-latte.jpg"
+    },
+    {
+      "id": "banana-pudding",
+      "name": "Банановый пудинг",
+      "category": "puddings",
+      "description": "Нежнейший банановый мусс, воздушный ванильный бисквит, пропитанный банановым молоком, хрустящее домашнее кокосовое печенье, кольца свежего банана и немного корицы.",
+      "ingredients": "Банан свежий, мука пшеничная, молоко растительное соевое, молоко растительное банановое, сливки растительные, стружка кокосовая, маргарин, масло подсолнечное, крахмал кукурузный, сахар, уксус столовый, соль, куркума, корица, ванилин, разрыхлитель, сода.",
+      "nutrition": "КБЖУ 100 г: 181.5 / 1.8 / 9.2 / 22.9",
+      "price": 390,
+      "size": "150 мл",
+      "tags": [
+        "plant based",
+        "bestseller",
+        "pudding"
+      ],
+      "featured": true,
+      "image": "assets/menu/banana-pudding.jpg",
+      "variants": [
+        {
+          "id": "150ml",
+          "label": "150 мл",
+          "size": "150 мл",
+          "price": 390
+        },
+        {
+          "id": "320ml",
+          "label": "320 мл",
+          "size": "320 мл",
+          "price": 550
+        }
+      ],
+      "available": true,
+      "isSpecial": false,
+      "sortOrder": 1,
+      "updatedAt": "2026-05-11T21:28:37.110Z"
+    },
+    {
+      "id": "chocolate-brownie-pudding",
+      "name": "Шоколадный пудинг с соленым брауни",
+      "category": "puddings",
+      "description": "Шоколадный мусс с терпким тёмным шоколадом и кокосовыми сливками, шоколадный бисквит с крепкой кофейной пропиткой, солоноватый ирисовый брауни и орео.",
+      "ingredients": "Шоколад горький, банан свежий, молоко растительное соевое, молоко кокосовое, сливки растительные, сахар, мука пшеничная, какао, крахмал кукурузный, маргарин, мука льняная, кофе, масло подсолнечное, пюре яблока, соль морская, разрыхлитель, сода, ванилин.",
+      "nutrition": "КБЖУ 100 г: 284.9 / 3.2 / 18.6 / 26.4",
+      "price": 390,
+      "size": "150 мл",
+      "tags": [
+        "plant based",
+        "chocolate",
+        "pudding"
+      ],
+      "featured": true,
+      "image": "assets/menu/chocolate-brownie-pudding.jpg",
+      "variants": [
+        {
+          "id": "150ml",
+          "label": "150 мл",
+          "size": "150 мл",
+          "price": 390
+        },
+        {
+          "id": "320ml",
+          "label": "320 мл",
+          "size": "320 мл",
+          "price": 550
+        }
+      ],
+      "available": true,
+      "isSpecial": false,
+      "sortOrder": 2,
+      "updatedAt": "2026-05-11T21:28:37.116Z"
+    },
+    {
+      "id": "trio-set",
+      "name": "Ассорти 3 × 150 мл",
+      "category": "puddings",
+      "description": "Набор из трёх маленьких креманок основной линейки пудингов: банановый, шарлотка с попкорном и шоколадный с солёным брауни.",
+      "ingredients": "Ассорти из трёх пудингов по 150 мл.",
+      "nutrition": "КБЖУ зависит от выбранных вкусов.",
+      "price": 1050,
+      "size": "3 × 150 мл",
+      "tags": [
+        "plant based",
+        "set",
+        "bestseller"
+      ],
+      "featured": true,
+      "image": "assets/menu/trio-set.jpg",
+      "variants": [],
+      "available": true,
+      "isSpecial": false,
+      "sortOrder": 3,
+      "updatedAt": "2026-05-11T21:28:37.116Z"
+    },
+    {
+      "id": "cherry-pie",
+      "name": "Вишнёвый пирог",
+      "category": "bakery",
+      "description": "Коржик, много сочной кислой вишни с лимонной цедрой и овсяно-миндальная крошка.",
+      "ingredients": "Мука пшеничная, вишня, маргарин, сахар белый, вода очищенная, хлопья овсяные, ядро миндаля, мука льняная, лимон, крахмал, разрыхлитель, соль, ванилин.",
+      "nutrition": "КБЖУ 180 г: 408 / 5 / 16 / 61",
+      "warning": "В редких случаях могут попадаться фрагменты косточек вишни.",
+      "price": 470,
+      "size": "1 шт.",
+      "tags": [
+        "plant based",
+        "bakery",
+        "nuts"
+      ],
+      "image": "assets/menu/cherry-pie.jpg",
+      "available": true,
+      "isSpecial": false,
+      "sortOrder": 4,
+      "updatedAt": "2026-05-11T21:28:37.116Z"
+    },
+    {
+      "id": "chocolate-cookie",
+      "name": "Шоколадное печенье",
+      "category": "bakery",
+      "description": "Насыщенное шоколадное печенье с цельным жареным фундуком и хлопьями морской соли.",
+      "ingredients": "Горький шоколад, маргарин, сахар, молоко растительное соевое, мука пшеничная, какао, фундук цельный жареный, мука льняная, соль морская, сода, разрыхлитель.",
+      "nutrition": "КБЖУ 80 г: 336 / 4 / 19.2 / 33.6",
+      "price": 380,
+      "size": "1 шт.",
+      "tags": [
+        "plant based",
+        "chocolate",
+        "nuts"
+      ],
+      "image": "assets/menu/chocolate-cookie.png",
+      "available": true,
+      "isSpecial": false,
+      "sortOrder": 5,
+      "updatedAt": "2026-05-11T21:28:37.116Z"
+    },
+    {
+      "id": "banana-bread",
+      "name": "Банановый бред",
+      "category": "bakery",
+      "description": "Мягкий банановый бисквит с пряными специями, арахисом и клубничным джемом.",
+      "ingredients": "Бананы, мука пшеничная, сахар белый, молоко растительное, масло растительное, арахис, яблочное пюре, джем клубничный, мука льняная, корица, разрыхлитель, соль, пряные специи, мускатный орех, сода, ванилин.",
+      "nutrition": "КБЖУ 110 г: 347 / 5 / 14 / 51",
+      "price": 350,
+      "size": "1 шт.",
+      "tags": [
+        "plant based",
+        "bakery",
+        "nuts"
+      ],
+      "image": "assets/menu/banana-bread.jpg",
+      "available": true,
+      "isSpecial": false,
+      "sortOrder": 6,
+      "updatedAt": "2026-05-11T21:28:37.116Z"
+    },
+    {
+      "id": "hot-drinks",
+      "name": "Кофе",
+      "category": "drinks",
+      "description": "Кофейная классика из меню MUSSI: фильтр кофе, американо, флэт уайт, капучино, латте и раф. Для молочных напитков выберите растительное молоко.",
+      "ingredients": "Кофе и растительное молоко на выбор: овсяное, кокосовое, фундучное, банановое, миндальное, фисташка-конопля. Добавки: порция эспрессо, протеин или сироп.",
+      "nutrition": "КБЖУ зависит от напитка, молока и добавок.",
+      "price": 360,
+      "size": "350 мл",
+      "tags": [
+        "plant based",
+        "coffee",
+        "drink"
+      ],
+      "image": "assets/menu/hot-drinks.jpg",
+      "variants": [
+        {
+          "id": "filter",
+          "label": "фильтр кофе",
+          "size": "350 мл",
+          "price": 360
+        },
+        {
+          "id": "americano",
+          "label": "американо",
+          "size": "250 мл",
+          "price": 280
+        },
+        {
+          "id": "flat-white",
+          "label": "флэт уайт",
+          "size": "250 мл",
+          "price": 420
+        },
+        {
+          "id": "cappuccino",
+          "label": "капучино",
+          "size": "250 мл",
+          "price": 380
+        },
+        {
+          "id": "latte",
+          "label": "латте",
+          "size": "350 мл",
+          "price": 450
+        },
+        {
+          "id": "raf",
+          "label": "раф",
+          "size": "350 мл",
+          "price": 490
+        }
+      ],
+      "optionGroups": [
+        {
+          "id": "milk",
+          "label": "Молоко",
+          "type": "single",
+          "options": [
+            {
+              "id": "oat",
+              "label": "овсяное",
+              "price": 0
+            },
+            {
+              "id": "coconut",
+              "label": "кокосовое",
+              "price": 0
+            },
+            {
+              "id": "hazelnut",
+              "label": "фундучное",
+              "price": 0
+            },
+            {
+              "id": "banana",
+              "label": "банановое",
+              "price": 0
+            },
+            {
+              "id": "almond",
+              "label": "миндальное",
+              "price": 0
+            },
+            {
+              "id": "pistachio-hemp",
+              "label": "фисташка-конопля",
+              "price": 0
+            }
+          ]
+        },
+        {
+          "id": "addons",
+          "label": "Добавки",
+          "type": "multi",
+          "options": [
+            {
+              "id": "espresso-shot",
+              "label": "порция эспрессо",
+              "price": 120
+            },
+            {
+              "id": "protein",
+              "label": "порция протеина",
+              "price": 100
+            },
+            {
+              "id": "syrup",
+              "label": "сироп",
+              "price": 60
+            }
+          ]
+        }
+      ],
+      "available": true,
+      "isSpecial": false,
+      "sortOrder": 13,
+      "updatedAt": "2026-05-11T21:28:37.116Z"
+    },
+    {
+      "id": "matcha-latte",
+      "name": "Матча-латте",
+      "category": "drinks",
+      "description": "Матча-латте на растительном молоке из меню чая MUSSI.",
+      "ingredients": "Матча и растительное молоко на выбор: овсяное, кокосовое, фундучное, банановое, миндальное, фисташка-конопля. Можно добавить сироп, протеин или порцию эспрессо.",
+      "nutrition": "350 мл",
+      "price": 500,
+      "size": "350 мл",
+      "optionGroups": [
+        {
+          "id": "milk",
+          "label": "Молоко",
+          "type": "single",
+          "options": [
+            {
+              "id": "oat",
+              "label": "овсяное",
+              "price": 0
+            },
+            {
+              "id": "coconut",
+              "label": "кокосовое",
+              "price": 0
+            },
+            {
+              "id": "hazelnut",
+              "label": "фундучное",
+              "price": 0
+            },
+            {
+              "id": "banana",
+              "label": "банановое",
+              "price": 0
+            },
+            {
+              "id": "almond",
+              "label": "миндальное",
+              "price": 0
+            },
+            {
+              "id": "pistachio-hemp",
+              "label": "фисташка-конопля",
+              "price": 0
+            }
+          ]
+        },
+        {
+          "id": "addons",
+          "label": "Добавки",
+          "type": "multi",
+          "options": [
+            {
+              "id": "espresso-shot",
+              "label": "порция эспрессо",
+              "price": 120
+            },
+            {
+              "id": "protein",
+              "label": "порция протеина",
+              "price": 100
+            },
+            {
+              "id": "syrup",
+              "label": "сироп",
+              "price": 60
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "plant based",
+        "matcha",
+        "drink"
+      ],
+      "available": true,
+      "isSpecial": false,
+      "sortOrder": 17,
+      "updatedAt": "2026-05-11T21:28:37.116Z"
+    },
+    {
+      "id": "tea-cup",
+      "name": "Чашка чая",
+      "category": "drinks",
+      "description": "Порция чая из меню MUSSI.",
+      "ingredients": "Чай на выбор.",
+      "nutrition": "350 мл",
+      "price": 150,
+      "size": "350 мл",
+      "tags": [
+        "plant based",
+        "drink",
+        "tea"
+      ],
+      "available": true,
+      "isSpecial": false,
+      "sortOrder": 18,
+      "updatedAt": "2026-05-11T21:28:37.116Z"
+    },
+    {
+      "id": "tea-pot",
+      "name": "Чайник чая",
+      "category": "drinks",
+      "description": "Большой чайник чая для спокойной встречи.",
+      "ingredients": "Чай на выбор.",
+      "nutrition": "800 мл",
+      "price": 450,
+      "size": "800 мл",
+      "tags": [
+        "plant based",
+        "drink",
+        "tea"
+      ],
+      "available": true,
+      "isSpecial": false,
+      "sortOrder": 19,
+      "updatedAt": "2026-05-11T21:28:37.116Z"
+    },
+    {
+      "id": "monthly-specials-info",
+      "name": "Особенные / special",
+      "category": "specials",
+      "description": "Напитки, пудинги и десерты, которые команда создаёт каждый месяц. Уточняйте у бариста, какие особенные позиции доступны сейчас.",
+      "ingredients": "Состав зависит от текущего специального меню.",
+      "nutrition": "Уточняется у бариста.",
+      "price": null,
+      "size": "по наличию",
+      "tags": [
+        "plant based",
+        "seasonal",
+        "special"
+      ],
+      "available": true,
+      "isSpecial": true,
+      "sortOrder": 20,
+      "updatedAt": "2026-05-11T21:28:37.116Z"
+    }
+  ]
+}
