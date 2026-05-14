@@ -12,6 +12,14 @@ const CONFIG = {
   languageStorageKey: "mussi-language-v1"
 };
 
+function isStaticPublicHost() {
+  try {
+    return typeof location !== "undefined" && location.hostname.toLowerCase().endsWith("github.io");
+  } catch {
+    return false;
+  }
+}
+
 const I18N = {
   ru: {
     "meta.title": "MUSSI — растительные пудинги и десерты, самовывоз у ВДНХ",
@@ -147,6 +155,7 @@ const I18N = {
     "promo.applied": "Промокод применен: скидка {percent}% (-{amount} ₽).",
     "promo.notFound": "Такого промокода нет или он выключен.",
     "promo.checkFailed": "Не получилось проверить промокод.",
+    "promo.staticHost": "На демо-сайте без сервера промокоды не проверяются.",
     "cart.total": "Итого",
     "cart.note.default": "После оформления статус заказа — во вкладке «Ваши заказы». Доставку курьером оформите в Яндекс Еде или Delivery Club.",
     "cart.note.unknown": "В заказе есть позиции без цены. Финальную сумму подтвердит сотрудник MUSSI.",
@@ -159,6 +168,8 @@ const I18N = {
     "checkout.hint.invalidPhone": "Проверьте номер телефона: нужны 10-11 цифр российского номера.",
     "checkout.hint.pickupTime": "Укажите, когда заберете заказ.",
     "checkout.hint.ready": "Все готово. Можно оформить заказ.",
+    "checkout.hint.staticHost":
+      "Это демо на GitHub Pages: верстка и корзина, без сервера заказ не уйдет. Полный сценарий — локально (npm start).",
     "orders.empty": "Здесь появятся ваши последние заказы.",
     "orders.active": "Активный заказ",
     "orders.recent": "Последние заказы",
@@ -201,6 +212,8 @@ const I18N = {
     "toast.emptyCart": "Сначала добавьте что-нибудь в корзину.",
     "toast.orderCreated": "Заказ принят на самовывоз. Номер сохранен во вкладке «Ваши заказы».",
     "toast.orderCreateFailed": "Не получилось создать заказ. Запустите сайт через npm start.",
+    "toast.staticHostCheckout":
+      "Здесь нет бэкенда: заказ не отправить. Полный сценарий — локально с npm start.",
     "toast.orderUpdated": "Статус заказа обновился.",
     "toast.orderAcceptedWithCode": "Заказ принят. Код для выдачи: {code}.",
     "toast.paid": "Статус заказа обновлен.",
@@ -360,6 +373,7 @@ const I18N = {
     "promo.applied": "Promo applied: {percent}% off (-{amount} ₽).",
     "promo.notFound": "This promo code does not exist or is disabled.",
     "promo.checkFailed": "Could not check the promo code.",
+    "promo.staticHost": "Promo codes are not verified on this static demo.",
     "cart.total": "Total",
     "cart.note.default": "After checkout, order status is under “Your orders”. For courier delivery use Yandex Eda or Delivery Club.",
     "cart.note.unknown": "Some items have no price. MUSSI staff will confirm the final total.",
@@ -372,6 +386,8 @@ const I18N = {
     "checkout.hint.invalidPhone": "Check the phone number: use 10-11 digits for a Russian number.",
     "checkout.hint.pickupTime": "Tell us when you will pick the order up.",
     "checkout.hint.ready": "Everything is ready. You can place the order.",
+    "checkout.hint.staticHost":
+      "GitHub Pages demo: layout and cart only; orders need the local server (npm start).",
     "orders.empty": "Your latest orders will appear here.",
     "orders.active": "Active order",
     "orders.recent": "Latest orders",
@@ -414,6 +430,7 @@ const I18N = {
     "toast.emptyCart": "Add something to cart first.",
     "toast.orderCreated": "Pickup order received. The number is saved in “Your orders”.",
     "toast.orderCreateFailed": "Could not create order. Run the site with npm start.",
+    "toast.staticHostCheckout": "No backend here: order cannot be sent. Run locally with npm start for the full flow.",
     "toast.orderUpdated": "Order status updated.",
     "toast.orderAcceptedWithCode": "Order accepted. Pickup code: {code}.",
     "toast.paid": "Order status updated.",
@@ -1270,6 +1287,12 @@ function renderPromoStatus(subtotal = null) {
     return;
   }
 
+  if (isStaticPublicHost()) {
+    selectors.promoStatus.textContent = t("promo.staticHost");
+    selectors.promoStatus.dataset.state = "idle";
+    return;
+  }
+
   const promo = getActivePromoPreview(subtotal);
   if (promo) {
     selectors.promoStatus.textContent = t("promo.applied")
@@ -1299,7 +1322,7 @@ function getActivePromoPreview(subtotal = null) {
 async function refreshPromoPreview() {
   const code = selectors.checkoutForm.elements.promo?.value.trim() || "";
   const entries = getCartEntries();
-  if (!code || !entries.length || window.location.protocol === "file:") {
+  if (!code || !entries.length || window.location.protocol === "file:" || isStaticPublicHost()) {
     state.promoPreview = null;
     renderCart();
     return;
@@ -1330,7 +1353,13 @@ function updateCheckoutState() {
   const rawPickupIso = getCombinedPickupIso();
   const hasPickupSlot = Boolean(rawPickupIso);
   const pickupErrorKey = hasPickupSlot ? validatePickupTime(rawPickupIso) : null;
-  const isDisabled = count === 0 || !hasName || !hasValidPhone || !hasPickupSlot || Boolean(pickupErrorKey);
+  const isDisabled =
+    isStaticPublicHost() ||
+    count === 0 ||
+    !hasName ||
+    !hasValidPhone ||
+    !hasPickupSlot ||
+    Boolean(pickupErrorKey);
 
   if (selectors.checkoutSubmit) {
     selectors.checkoutSubmit.disabled = isDisabled;
@@ -1342,6 +1371,8 @@ function updateCheckoutState() {
   let hintKey;
   if (count === 0) {
     hintKey = "checkout.hint.empty";
+  } else if (isStaticPublicHost()) {
+    hintKey = "checkout.hint.staticHost";
   } else if (!hasValidPhone) {
     hintKey = hasPhone ? "checkout.hint.invalidPhone" : "checkout.hint.phone";
   } else if (!hasPickupSlot) {
@@ -1453,6 +1484,11 @@ function switchCartTab(tabName = "cart") {
 async function handleCheckout(event) {
   event.preventDefault();
 
+  if (isStaticPublicHost()) {
+    showToast(t("toast.staticHostCheckout"));
+    return;
+  }
+
   const entries = getCartEntries();
   if (!entries.length) {
     showToast(t("toast.emptyCart"));
@@ -1555,6 +1591,11 @@ function mapServerErrorToHint(code) {
 }
 
 async function mockPayOrder(orderId) {
+  if (isStaticPublicHost()) {
+    showToast(t("toast.staticHostCheckout"));
+    return;
+  }
+
   try {
     const paidOrder = await requestJson(`${CONFIG.ordersUrl}/${orderId}/mock-pay`, {
       method: "POST"
@@ -1847,7 +1888,7 @@ function upsertOrderHistory(order) {
 }
 
 async function refreshTrackedOrders(shouldToast = false) {
-  if (!state.orders.length || window.location.protocol === "file:") return;
+  if (!state.orders.length || window.location.protocol === "file:" || isStaticPublicHost()) return;
 
   let changed = false;
   const refreshedOrders = await Promise.all(
@@ -1968,7 +2009,7 @@ async function handleOrderSseEvent(event) {
 }
 
 function connectMenuEvents() {
-  if (!window.EventSource || window.location.protocol === "file:") {
+  if (!window.EventSource || window.location.protocol === "file:" || isStaticPublicHost()) {
     return;
   }
 
@@ -1991,7 +2032,7 @@ function connectOrderEvents() {
 }
 
 function startMenuAutoSync() {
-  if (window.location.protocol === "file:") {
+  if (window.location.protocol === "file:" || isStaticPublicHost()) {
     return;
   }
 
@@ -2007,7 +2048,7 @@ function startMenuAutoSync() {
 }
 
 function startOrderAutoSync() {
-  if (window.location.protocol === "file:") {
+  if (window.location.protocol === "file:" || isStaticPublicHost()) {
     return;
   }
 
